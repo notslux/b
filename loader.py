@@ -10,7 +10,7 @@ except ImportError:
     exit()
 print("all libraries installed and working, opening loader.")
 time.sleep(1)
-vers = 3
+vers = 1
 os.system("cls")
 
 current_version = requests.get("https://raw.githubusercontent.com/notslux/b/main/bb.txt").json()

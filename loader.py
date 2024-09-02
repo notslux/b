@@ -13,7 +13,7 @@ time.sleep(1)
 vers = 3
 os.system("cls")
 
-current_version = requests.get("https://raw.githubusercontent.com/jaydnepic/b/main/bb.txt").json()
+current_version = requests.get("https://raw.githubusercontent.com/notslux/b/main/bb.txt").json()
 if vers == current_version:
     print(Fore.GREEN + "You have the latest version of the loader.")
 elif vers != current_version:
@@ -51,7 +51,7 @@ selection = input(Fore.LIGHTGREEN_EX + "> ")
 
 if selection == "1":
     print("downloading valorant triggerbot...")
-    download = requests.get("https://github.com/jaydnepic/b/raw/main/b.zip")
+    download = requests.get("https://github.com/notslux/b/raw/main/b.zip")
     zip_file = zipfile.ZipFile(BytesIO(download.content))
     directory_name = str(uuid.uuid4())
     os.makedirs(directory_name, exist_ok=True)
@@ -89,12 +89,12 @@ elif selection == "4":
     time.sleep(2)
 elif selection == "5":
     print("checking version...")
-    current_version = requests.get("https://raw.githubusercontent.com/jaydnepic/b/main/bb.txt").json()
+    current_version = requests.get("https://raw.githubusercontent.com/notslux/b/main/bb.txt").json()
     if vers == current_version:
         print(Fore.GREEN + f"You're running the latest version ({vers})")
     else:
         print(Fore.RED + "outdated loader! ; updating...")
-        download = requests.get("https://raw.githubusercontent.com/jaydnepic/b/main/loader.py")
+        download = requests.get("https://raw.githubusercontent.com/notslux/b/main/loader.py")
         directory_name = str(uuid.uuid4())
         os.makedirs(directory_name, exist_ok=True)
         file_path = os.path.join(directory_name, "loader.py")
